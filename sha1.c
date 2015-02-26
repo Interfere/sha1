@@ -1,5 +1,5 @@
 // Created by Alex Ushakov on 09/09/14.
-// Update by Nicolas Reynayd on 02/26/15.
+// Update by Nicolas Reynaud on 02/26/15.
 //
 // Copyright (c) 2014 Alex Komnin. All rights reserved.
 //
