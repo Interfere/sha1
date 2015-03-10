@@ -1,4 +1,4 @@
-// Created by Alex Ushakov on 09/09/14.
+// Created by Alex Komnin on 09/09/14.
 // Update by Nicolas Reynaud on 02/26/15.
 //
 // Copyright (c) 2014 Alex Komnin. All rights reserved.
@@ -81,38 +81,55 @@ static void SHA1_calc(struct SHA_ctx *ctx, uint32_t M[16]) {
     static const uint32_t K_20_39 = 0x6ED9EBA1;
     static const uint32_t K_40_59 = 0x8F1BBCDC;
     static const uint32_t K_60_79 = 0xCA62C1D6;
+	
     uint32_t a = ctx->A, b = ctx->B, c = ctx->C, d = ctx->D, e = ctx->E;
     uint32_t W[80];
+	
     W[0] = bswap_32(M[0]);
     SHA1_ONE_ITER(a, b, c, d, e, K_00_19, F_00_19, W[0]);
+	
     W[1] = bswap_32(M[1]);
     SHA1_ONE_ITER(e, a, b, c, d, K_00_19, F_00_19, W[1]);
+	
     W[2] = bswap_32(M[2]);
     SHA1_ONE_ITER(d, e, a, b, c, K_00_19, F_00_19, W[2]);
+	
     W[3] = bswap_32(M[3]);
     SHA1_ONE_ITER(c, d, e, a, b, K_00_19, F_00_19, W[3]);
+	
     W[4] = bswap_32(M[4]);
     SHA1_ONE_ITER(b, c, d, e, a, K_00_19, F_00_19, W[4]);
+	
     W[5] = bswap_32(M[5]);
     SHA1_ONE_ITER(a, b, c, d, e, K_00_19, F_00_19, W[5]);
+	
     W[6] = bswap_32(M[6]);
     SHA1_ONE_ITER(e, a, b, c, d, K_00_19, F_00_19, W[6]);
+	
     W[7] = bswap_32(M[7]);
     SHA1_ONE_ITER(d, e, a, b, c, K_00_19, F_00_19, W[7]);
+	
     W[8] = bswap_32(M[8]);
     SHA1_ONE_ITER(c, d, e, a, b, K_00_19, F_00_19, W[8]);
+	
     W[9] = bswap_32(M[9]);
     SHA1_ONE_ITER(b, c, d, e, a, K_00_19, F_00_19, W[9]);
+	
     W[10] = bswap_32(M[10]);
     SHA1_ONE_ITER(a, b, c, d, e, K_00_19, F_00_19, W[10]);
+	
     W[11] = bswap_32(M[11]);
     SHA1_ONE_ITER(e, a, b, c, d, K_00_19, F_00_19, W[11]);
+	
     W[12] = bswap_32(M[12]);
     SHA1_ONE_ITER(d, e, a, b, c, K_00_19, F_00_19, W[12]);
+	
     W[13] = bswap_32(M[13]);
     SHA1_ONE_ITER(c, d, e, a, b, K_00_19, F_00_19, W[13]);
+	
     W[14] = bswap_32(M[14]);
     SHA1_ONE_ITER(b, c, d, e, a, K_00_19, F_00_19, W[14]);
+	
     W[15] = bswap_32(M[15]);
     SHA1_ONE_ITER(a, b, c, d, e, K_00_19, F_00_19, W[15]);
 
